@@ -5,10 +5,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 
+
 @Module({
   imports: [UsersModule, AuthModule,
     MongooseModule.forRoot('mongodb://localhost/nest')],
   controllers: [AppController],
-  providers: [ AppService],
+  providers: [ AppService ],
 })
 export class AppModule {}
